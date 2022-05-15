@@ -1,0 +1,20 @@
+<div class="content" role="main"> 
+
+    <h1>Kosár</h1>
+
+    <a [routerLink]="['/first']">Termékek:</a>
+    <a [routerLink]="['/login']">Logout</a>
+    
+    
+    <ul>
+      <li>Termékek:</li>
+      <li *ngFor="let x of cloudElements">
+        {{x}}
+      </li>
+    </ul>
+    
+    <div>
+      <button (click)="deleteCart()">Kosár törlése</button>
+    </div>
+  
+  </div>

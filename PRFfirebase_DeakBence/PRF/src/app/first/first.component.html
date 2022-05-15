@@ -1,0 +1,44 @@
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+
+  <button (click)="goToCart()">Kosár</button>
+  <a [routerLink]="['/login']">Logout</a>
+
+<h1>Termékek:</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">-</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of cloudElements">
+        <th> {{el}} </th>
+        <td><button (click)="addToCart(el)">Kosárba!</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<h1>Majd megy az admin felületre</h1>
+
+
+
+
+
+  <div>
+    <div>
+      <label>Id</label>
+      <input type="text" id="id" [(ngModel)]="cloudId">
+    </div>
+    <div>
+      <label>Value</label>
+      <input type="text" id="value" [(ngModel)]="value">
+    </div>
+    <button (click)="saveData()">SAVE</button>
+  </div>
+  <button (click)="refreshDb()">REFRESH</button>
